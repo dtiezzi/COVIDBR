@@ -71,7 +71,7 @@ dev.off()
  <img src="_img/covid_top5.png" width="600"/>
 </p>
 
-This is a developing tool to help people to access reliable data from Brazil. We are working with publicly available sequencing data to keep the Sars-Cov-2 mutation profile on track.
+This is a developing tool to help people to access reliable data from Brazil. We are working with publicly available sequencing data to keep tracking the Sars-Cov-2 mutation profile.
 
 **If you would like to help, please email me: dtiezzi@usp.br**
 
