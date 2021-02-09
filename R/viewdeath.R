@@ -12,10 +12,10 @@
 #' @export
 
 #' @examples
-#' covid <- load.covid()
+#' covid <- load.covidBr()
 #' ibge <- load.ibgeinfo()
 #' myid <- ibge.id(ibge, 'SP')
-#' mychart <- plot.covid.newdeaths(covid, myid)
+#' mychart <- view.covid.deaths(covid, myid)
 #'
 
 view.covid.deaths <- function(x, ibge = NA, top5 = FALSE) {

@@ -13,6 +13,6 @@ A data frame with covid19 information
 The function downloads the updated COVID19 information from Brazil
 }
 \examples{
-covid <- load.covid()
+covid <- load.covidBr()
 head(covid)
 }

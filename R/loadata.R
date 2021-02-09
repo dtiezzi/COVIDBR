@@ -7,7 +7,7 @@
 #' @export
 
 #' @examples
-#' covid <- load.covid()
+#' covid <- load.covidBr()
 #' head(covid)
 
 

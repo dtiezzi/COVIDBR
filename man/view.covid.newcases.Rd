@@ -20,9 +20,9 @@ A line chart with covid19 incidence in function of time
 The function creates line chart displaying the number of new COVID19 cases (7-days mean incidence) in Brazil
 }
 \examples{
-covid <- load.covid()
+covid <- load.covidBr()
 ibge <- load.ibgeinfo()
 myid <- ibge.id(ibge, 'SP')
-mychart <- plot.covid.newcases(covid, myid)
+mychart <- view.covid.newcases(covid, myid)
 
 }

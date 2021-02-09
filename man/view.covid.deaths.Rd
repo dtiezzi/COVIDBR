@@ -20,9 +20,9 @@ A line chart with covid19 deaths in function of time
 The function creates line chart displaying the number of COVID19 deaths (7-days mean) in Brazil
 }
 \examples{
-covid <- load.covid()
+covid <- load.covidBr()
 ibge <- load.ibgeinfo()
 myid <- ibge.id(ibge, 'SP')
-mychart <- plot.covid.newdeaths(covid, myid)
+mychart <- view.covid.deaths(covid, myid)
 
 }
