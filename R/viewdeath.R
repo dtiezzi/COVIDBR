@@ -26,7 +26,7 @@ view.covid.deaths <- function(x, ibge = NA, top5 = FALSE) {
     ibgetmp <- load.ibgeinfo()
     sts <- ibgetmp$name[ibgetmp$id %in% t5]
     df$id <- as.factor(df$id)
-    tit = 'COVID19 - New Cases per day - Top 8 States in Brazil'
+    tit = 'COVID19 - New Cases per day - Top 5 States in Brazil'
     p <- ggplot(data = df, aes(x = date, y = deathav, color = id)) + geom_line(size = 1.27) + ylab("Total number") + ggtitle(tit) + theme_minimal() + scale_colour_viridis_d('state', labels = sts, option = "plasma")
     return(p)
   } else if (nrow(ibge) == 0) {
