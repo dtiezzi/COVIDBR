@@ -17,7 +17,12 @@ Features:
 
   - Access data according to specific location (states and cities).
   - Plot the incidence and recorded deaths.
-  - Use the data to do your personal analyses.
+  - Use the data to do your personal analyses:
+    - State / county IBGE code (id);
+    - Estimated poulation in each state / county (population);
+    - Cumulative number of cases (sumcases) and deaths (sumdeaths);
+    - Number of new cases (newcases) and deaths (newdeaths);
+    - 7-days average number of cases (newav) and deaths (deathav).
 
 
 `covidBR` updates the COVID-19 records from [covid.saude](https://covid.saude.gov.br/), an official website maintained by the Ministry of Health in Brazil.
@@ -61,6 +66,10 @@ png('Covid_new_cases_SP.png', width = 12, height = 8, unit = 'in', res = 300)
 mychart0
 dev.off()
 ```
+
+<p align="center">
+ <img src="_img/covid_top5.png" width="600"/>
+</p>
 
 This is a developing tool to help people to access reliable data from Brazil. We are working with publicly available sequencing data to keep the Sars-Cov-2 mutation profile on track.
 
