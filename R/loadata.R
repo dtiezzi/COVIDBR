@@ -18,5 +18,6 @@ load.covidBr <- function() {
   tmp$date <- as.Date(tmp$date, format = "%Y-%m-%d")
   tmp <- tmp[order(tmp$id, tmp$date), ]
   rownames(tmp) <- seq(1:nrow(tmp))
+  unlink('cov')
   return(tmp)
 }

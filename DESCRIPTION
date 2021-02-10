@@ -1,7 +1,7 @@
 Package: covidBR
 Type: Package
 Title: COVID19 information from Brazil (COVID19 Brazil)
-Version: 0.1.0
+Version: 0.1.1
 Author: Daniel Tiezzi
 Maintainer: Daniel Tiezzi <dtiezzi@usp.br>
 Description: More about what it does (maybe more than one line)
@@ -10,4 +10,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-Imports: ggplot2
+Depends:
+  R (>= 3.5.0)
+Imports: 
+  ggplot2, 
+  plotly, 
+  magrittr

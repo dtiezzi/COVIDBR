@@ -4,12 +4,12 @@
 \alias{view.covid.newcases}
 \title{Plot COVID19 new cases}
 \usage{
-view.covid.newcases(x, ibge = NA, top5 = FALSE)
+view.covid.newcases(x, ibgeinfo = NA, top5 = FALSE)
 }
 \arguments{
 \item{x}{a data frame with COVID19 information from load.covid()}
 
-\item{ibge}{a data frame (default = NA, all Brazil data) from ibge.id()}
+\item{ibgeinfo}{a data frame (default = NA, all Brazil data) from ibge.id()}
 
 \item{top5}{boolean (default = FALSE). True if id == NA. If True, displays the top5 states in total number of cases}
 }
@@ -21,8 +21,7 @@ The function creates line chart displaying the number of new COVID19 cases (7-da
 }
 \examples{
 covid <- load.covidBr()
-ibge <- load.ibgeinfo()
-myid <- ibge.id(ibge, 'SP')
+myid <- ibge.id('SP')
 mychart <- view.covid.newcases(covid, myid)
 
 }

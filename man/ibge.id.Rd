@@ -4,11 +4,9 @@
 \alias{ibge.id}
 \title{Find IBGE code}
 \usage{
-ibge.id(x, location)
+ibge.id(location)
 }
 \arguments{
-\item{x}{ibge data frame}
-
 \item{location}{string (state or city/county name)}
 }
 \value{
@@ -18,7 +16,6 @@ A single line data frame with IBGE code, location name and the estimated populat
 The function returns the IBGE code based on state (ex: 'SP', 'MG' ...) or the city name (ex: 'Rio de Janeiro', São Paulo'...)
 }
 \examples{
-ibge <- load.ibgeinfo()
-myId <- ibge.id(ibge, location = 'SP')
+myId <- ibge.id('SP')
 
 }

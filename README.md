@@ -17,6 +17,7 @@ Features:
 
   - Access data according to specific location (states and cities).
   - Plot the incidence and recorded deaths.
+  - Generate interactive maps with Plotly.
   - Use the data to do your personal analyses:
     - State / county IBGE code (id);
     - Estimated poulation in each state / county (population);
@@ -68,7 +69,19 @@ dev.off()
 ```
 
 <p align="center">
- <img src="_img/covid_top5.png" width="600"/>
+ <img src="man/figures/covid_top5.png" width="600"/>
+</p>
+
+### You generate interactive maps
+
+Create interactive maps with Plotly on backgound.
+
+``` r
+covid <- load.covidBr()
+mymap <- view.cases.map(covid, perhab = TRUE)
+```
+<p align="center">
+ <img src="man/figures/br_permil.png" width="600"/>
 </p>
 
 This is a developing tool to help people to access reliable data from Brazil. We are working with publicly available sequencing data to keep tracking the Sars-Cov-2 mutation profile.

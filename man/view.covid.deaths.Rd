@@ -4,12 +4,12 @@
 \alias{view.covid.deaths}
 \title{Plot COVID19 deaths}
 \usage{
-view.covid.deaths(x, ibge = NA, top5 = FALSE)
+view.covid.deaths(x, ibgeinfo = NA, top5 = FALSE)
 }
 \arguments{
 \item{x}{a data frame with COVID19 information from load.covid()}
 
-\item{ibge}{a data frame (default = NA, all Brazil data) from ibge.id()}
+\item{ibgeinfo}{a data frame (default = NA, all Brazil data) from ibge.id()}
 
 \item{top5}{boolean (default = FALSE). True if id == NA. If True, displays the top5 states in total number of cases}
 }
@@ -21,8 +21,7 @@ The function creates line chart displaying the number of COVID19 deaths (7-days 
 }
 \examples{
 covid <- load.covidBr()
-ibge <- load.ibgeinfo()
-myid <- ibge.id(ibge, 'SP')
+myid <- ibge.id('SP')
 mychart <- view.covid.deaths(covid, myid)
 
 }
