@@ -20,15 +20,16 @@
 
 view.covid.newcases <- function(x, ibgeinfo = NA, top5 = FALSE) {
   if (top5) {
-    dt <- subset(x, x$date == max(x$date) & x$id < 100)
-    t5 <- dt[order(dt$sumcases, decreasing = TRUE), ][2:6, 1]
+    dt <- subset(x, x$date == max(x$date) & x$id < 76)
+    t5 <- dt[order(dt$sumcases, decreasing = TRUE), ][1:5, 1]
     df <- subset(x, x$id %in% t5)
     ibge <- covidBR::ibge
-    sts <- ibge$name[ibge$id %in% t5]
-    print(sts)
+    sts <- ibge[ibge$id %in% t5, c(2,3)]
+    rownames(sts) <- sts$id
     df$id <- as.factor(df$id)
+    sts <- sts[levels(df$id), ]
     tit = 'COVID19 - New Cases per day - Top 5 States in Brazil'
-    p <- ggplot(data = df, aes(x = date, y = newav, color = id)) + geom_line(size = 1.1) + ylab("Total number") + ggtitle(tit) + theme_minimal() + scale_colour_viridis_d('State', labels = sts, option = "plasma")
+    p <- ggplot(data = df, aes(x = date, y = newav, color = id)) + geom_line(size = 1.1) + ylab("Total number") + ggtitle(tit) + theme_minimal() + scale_colour_viridis_d('State', labels = sts$name, option = "plasma")
     return(p)
   } else if (is.na(ibgeinfo)) {
     df <- subset(x, x$id == 76)
