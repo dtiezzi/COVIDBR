@@ -45,9 +45,12 @@ There is a dedicated function to load a clean and ready to use data.
 
 ``` r
 covid <- load.covidBr()
-ibge <- load.ibgeinfo()
 ```
+If you need to load the IBGE codes and state / county population, there is a ibge.RData file you can access:
 
+```r
+data(ibge)
+```
 ### Visualize the data from a specific location based on IBGE code
 
 There are two functions to display the number of new cases and deaths.
